@@ -1,0 +1,161 @@
+.container{
+  width: 1200px;
+}
+
+
+select {
+width: 180px;
+padding: .8rem .5rem;
+border: 1px solid #999;
+font-family: inherit;
+background: url(arrow.jpg) no-repeat 95% 50%;
+border-radius: 5px;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+align: middle;
+
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+footer {
+  text-align: center ;F
+
+}
+
+.md_left {
+  margin-bottom: 2.5em;
+  margin-top: 2em;
+}
+
+.num1, .num2, .num3, .num4, .num5, .num6 {
+  margin-bottom: 1em;
+}
+
+.idx1, .idx2, .idx3, .idx4, .idx5, .idx6 {
+  margin-bottom: 1em;
+}
+
+.case1, .case2, .case3, .case3, .case4, .case4, .case5, .case6 {
+  margin-bottom: 1em;
+}
+
+.view_btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.btn_h {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid green;
+  outline: none;
+  line-height: 1.5;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  white-space: nowrap;
+  color: green;
+}
+
+.btn_h--border::after, .btn--border::before,
+.btn_h--border span::after,
+.btn_h--border span::before {
+  content: "";
+  position: absolute;
+  background-color: green;
+  transition: 0.5s ease;
+}
+.btn_h--border::after, .btn--border::before {
+  height: 100%;
+  width: 2px;
+  top: -2px;
+}
+.btn_h--border::after {
+  left: -2px;
+}
+.btn_h--border::before {
+  right: -2px;
+}
+.btn_h--border span::after,
+.btn_h--border span::before {
+  height: 2px;
+  width: 100%;
+  left: -2px;
+}
+.btn_h--border span::after {
+  top: -2px;
+}
+.btn_h--border span::before {
+  bottom: -2px;
+}
+.btn_h--border:hover:after {
+  transform: translatex(10px);
+}
+.btn_h--border:hover:before {
+  transform: translatex(-10px);
+}
+.btn_h--border:hover span::after {
+  transform: translatey(10px);
+}
+.btn_h--border:hover span::before {
+  transform: translatey(-10px);
+}
+/*
+.btn--border::after, .btn--border::before,
+.btn--border span::after,
+.btn--border span::before {
+ content: "";
+ position: absolute;
+ background-color: white;
+ transition: 0.5s ease;
+}
+.btn--border::after, .btn--border::before {
+ height: 100%;
+ width: 2px;
+ top: -2px;
+}
+.btn--border::after {
+ left: -2px;
+}
+.btn--border::before {
+ right: -2px;
+}
+.btn--border span::after,
+.btn--border span::before {
+ height: 2px;
+ width: 100%;
+ left: -2px;
+}
+.btn--border span::after {
+ top: -2px;
+}
+.btn--border span::before {
+ bottom: -2px;
+}
+.btn--border:hover:after {
+ transform: translatex(-12px);
+}
+.btn--border:hover:before {
+ transform: translatex(12px);
+}
+.btn--border:hover span::after {
+ transform: translatey(-12px);
+}
+.btn--border:hover span::before {
+ transform: translatey(12px);
+}
+*/
