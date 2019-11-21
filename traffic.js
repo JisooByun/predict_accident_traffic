@@ -134,18 +134,18 @@ function create_list(){
     top5_datas = JSON.parse(response.data)
     top5 = top5_datas.data
     console.log(top5[0]["pred-decline"])
-    $('.num1').html("위도:"+top5[0]["Latitude"]+" 경도:"+top5[0]["Longitude"]);
-    $('.num2').html("위도:"+top5[1]["Latitude"]+" 경도:"+top5[1]["Longitude"]);
-    $('.num3').html("위도:"+top5[2]["Latitude"]+" 경도:"+top5[2]["Longitude"]);
-    $('.num4').html("위도:"+top5[3]["Latitude"]+" 경도:"+top5[3]["Longitude"]);
-    $('.num5').html("위도:"+top5[4]["Latitude"]+" 경도:"+top5[4]["Longitude"]);
-    $('.num6').html("위도:"+top5[5]["Latitude"]+" 경도:"+top5[5]["Longitude"]);
-    $('.case1').html(top5[0]["pred-decline"].toFixed(2))
-    $('.case2').html(top5[1]["pred-decline"].toFixed(2))
-    $('.case3').html(top5[2]["pred-decline"].toFixed(2))
-    $('.case4').html(top5[3]["pred-decline"].toFixed(2))
-    $('.case5').html(top5[4]["pred-decline"].toFixed(2))
-    $('.case6').html(top5[5]["pred-decline"].toFixed(2))
+    $('.num1').html("위도:"+top5[0]["Latitude"].toFixed(3)+" 경도:"+top5[0]["Longitude"].toFixed(3));
+    $('.num2').html("위도:"+top5[1]["Latitude"].toFixed(3)+" 경도:"+top5[1]["Longitude"].toFixed(3));
+    $('.num3').html("위도:"+top5[2]["Latitude"].toFixed(3)+" 경도:"+top5[2]["Longitude"].toFixed(3));
+    $('.num4').html("위도:"+top5[3]["Latitude"].toFixed(3)+" 경도:"+top5[3]["Longitude"].toFixed(3));
+    $('.num5').html("위도:"+top5[4]["Latitude"].toFixed(3)+" 경도:"+top5[4]["Longitude"].toFixed(3));
+    $('.num6').html("위도:"+top5[5]["Latitude"].toFixed(3)+" 경도:"+top5[5]["Longitude"].toFixed(3));
+    $('.case1').html(top5[0]["pred-decline"].toFixed(2)+"건")
+    $('.case2').html(top5[1]["pred-decline"].toFixed(2)+"건")
+    $('.case3').html(top5[2]["pred-decline"].toFixed(2)+"건")
+    $('.case4').html(top5[3]["pred-decline"].toFixed(2)+"건")
+    $('.case5').html(top5[4]["pred-decline"].toFixed(2)+"건")
+    $('.case6').html(top5[5]["pred-decline"].toFixed(2)+"건")
   })
   .catch(error=> {
     console.log(error);
@@ -156,9 +156,14 @@ function view_map(index){
   var mapOptions = {
   center: new naver.maps.LatLng(top5[index]["Latitude"], top5[index]["Longitude"]),
   zoom: 12
-            
-        
-
   };
   var map = new naver.maps.Map('map', mapOptions); 
+  
+  var circle = new naver.maps.Circle({
+    map: map,
+    center: new naver.maps.LatLng(top5[index]["Latitude"], top5[index]["Longitude"]),
+    radius: 20,
+    fillColor: 'crimson',
+    fillOpacity: 0.6
+});
 }
