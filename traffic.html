@@ -15,11 +15,11 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container-fluid">
 
       <header>
         <!-- Image and text -->
-        <nav class="navbar navbar-light bg-light">
+        <nav class="navbar navbar-light bg-light justify-content-md-center">
           <a class="navbar-brand" href="traffic.html">
             <img src="pr_title.png" class="d-inline-block align-top" alt="">
             <font size="15rem"><b>　Traffic Accident Analysis</b></font>
@@ -27,8 +27,8 @@
         </nav>
       </header>
 
-      <div class = "row" > <!-- 중간 전체 -->
-        <div class = "col-md-6"> <!-- 왼쪽 칸-->
+      <div class = "row justify-content-md-center"> <!-- 중간 전체 -->
+        <div class = "col-md-4"> <!-- 왼쪽 칸-->
           <div class = "row md_left justify-content-md-center"> <!--md_left는 내가 만든 css 변수 -->
             <div class = "col-md-4" name = "first_select"> <!-- 첫번째 구 선택 버튼-->
               <select name = "GuName" id = "GuName" onchange="myfunc1(this.options[this.selectedIndex].value)">
@@ -66,7 +66,7 @@
                 <option value="" selected="selected"> --요인 변경사항--</option>
                 <option value="trafficlight_num">신호등</a>
                 <option value="mean_maxspeed">최대속도</a>
-              </select>
+              </select><br>
               <input type="text" class ="text_num" style="text-align:center; width:70px; height:30px;">
               <button onclick="plus()">+</button>
               <button onclick="minus()">-</button>
@@ -74,37 +74,37 @@
             </div>
           </div>
           <div class = "row view_btn"> <!--요인 선택 시 뜨는 위도 경도 좌표 버튼 들어갈 칸 -->
-            <div class="row">
+            <div class="row col-md-11 justify-content-md-around">
               <button type="button" class="idx1 btn btn-light btn-lg" disabled>1.</button>
               <button type="button" class="num1 btn-lg btn_h btn_h--boder" onclick = "view_map(0)">　　　　가장 위험한 곳　　　 </button>
               <button type="button" class="case1 btn btn-secondary btn-lg" disabled>사고건수</button>
             </div>
 
-            <div class="row">
+            <div class="row col-md-11 justify-content-md-around">
               <button type="button" class="idx2 btn btn-light btn-lg" disabled>2.</button>
               <button type="button" class="num2 btn-lg btn_h btn_h--boder" onclick = "view_map(1)">　　　　두 번째로 위험　　　 </button>
               <button type="button" class="case2 btn btn-secondary btn-lg" disabled>사고건수</button>
             </div>
 
-            <div class="row">
+            <div class="row col-md-11 justify-content-md-around">
               <button type="button" class="idx3 btn btn-light btn-lg" disabled>3.</button>
               <button class="num3 btn_h btn_h--boder btn-lg" onclick = "view_map(2)">　　　　세 번째로 위험　　　 <span></span></button>
               <button type="button" class="case3 btn btn-secondary btn-lg" disabled>사고건수</button>
             </div>
 
-            <div class="row">
+            <div class="row col-md-11 justify-content-md-around">
               <button type="button" class="idx4 btn btn-light btn-lg" disabled>4.</button>
-              <button type="button" class="num4 btn-lg btn_h btn_h--boder" onclick = "view_map(3)">　　　　네 번쨰로 위험　　　 </button>
+              <button type="button" class="num4 btn-lg btn_h btn_h--boder" onclick = "view_map(3)">　　　　네 번째로 위험　　　 </button>
               <button type="button" class="case4 btn btn-secondary btn-lg" disabled>사고건수</button>
             </div>
 
-            <div class="row">
+            <div class="row col-md-11 justify-content-md-around">
               <button type="button" class="idx5 btn btn-light btn-lg" disabled>5.</button>
               <button type="button" class="num5 btn-lg btn_h btn_h--boder" onclick = "view_map(4)">　　　다섯 번째로 위험　　　 </button>
               <button type="button" class="case5 btn btn-secondary btn-lg" disabled>사고건수</button>
             </div>
 
-            <div class="row">
+            <div class="row col-md-11 justify-content-md-around">
               <button type="button" class="idx6 btn btn-light btn-lg" disabled>6.</button>
               <button type="button" class="num6 btn-lg btn_h btn_h--boder" onclick = "view_map(5)">　　　여섯 번째로 위험　　　 </button>
               <button type="button" class="case6 btn btn-secondary btn-lg" disabled>사고건수</button>
@@ -139,7 +139,7 @@
 
       <!-- 마지막? -->
       <hr>
-      <footer>
+      <footer >
         seocho-KAIST @2019
       </footer>
     </div>
