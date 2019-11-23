@@ -1,6 +1,8 @@
 import pymysql
 import pandas as pd
 import joblib
+from sklearn.metrics import mean_squared_error
+import numpy as np
 # Guname = AA,BB,CC..... factor: light_num,schoolnum.... value 1,2,3,10,20....
 def return_top5_cross(GuName,factor,value):
 
@@ -20,7 +22,7 @@ def return_top5_cross(GuName,factor,value):
     print(df_process)
     df_process[df_process.columns] = df_process[df_process.columns].apply(pd.to_numeric, downcast='float', errors='coerce')
 
-    xgboost_001 = joblib.load('xg_reg_002')
+    xgboost_001 = joblib.load('xg_reg_003')
 
     pred_ori = xgboost_001.predict(df_process)
     df["pred_ori"] = pred_ori
@@ -40,6 +42,10 @@ def return_top5_cross(GuName,factor,value):
     df["pred-decline"] = round(df["pred-decline"],2)
     print("------------------요인변경후 예측값, 변경전과 변경후의 차이------------------")
     print(df)
+    print(df["Longitude"])
+    print(df["Latitude"])
+    df["pred_ori2"] = df["pred_ori"]*df["pred_ori"]
+    print(df["pred_factor"])
     df = df.sort_values("pred-decline")
 
     row_num =[]
@@ -52,6 +58,8 @@ def return_top5_cross(GuName,factor,value):
     x = df.loc[df["rank"].isin([1,2,3,4,5,6])]
     print("------------------최종으로 웹에 넘길 상위 6개 데이터------------------")
     print(x)
+    rmse = np.sqrt(mean_squared_error(df["pred_ori2"], df["acc_count"]))
+    print(rmse)
     json_x = x.to_json(orient='table')
     return json_x
 return_top5_cross("AA","trafficlight_num",1) #테스트 데이터
