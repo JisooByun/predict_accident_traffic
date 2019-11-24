@@ -83,11 +83,11 @@ function myfunc1(val){
     var T= 127.0928845;
   }
 
-  var mapOptions = {
+  mapOptions = {
   center: new naver.maps.LatLng(R,T),
   zoom: 8
             
-        
+  
 
   };
   var map = new naver.maps.Map('map', mapOptions); 
@@ -133,7 +133,7 @@ function create_list(){
   .then(response=> {
     top5_datas = JSON.parse(response.data)
     top5 = top5_datas.data
-    console.log(top5[0]["pred-decline"])
+    console.log(top5[0])
     $('.num1').html("위도:"+top5[0]["Latitude"].toFixed(3)+" 경도:"+top5[0]["Longitude"].toFixed(3));
     $('.num2').html("위도:"+top5[1]["Latitude"].toFixed(3)+" 경도:"+top5[1]["Longitude"].toFixed(3));
     $('.num3').html("위도:"+top5[2]["Latitude"].toFixed(3)+" 경도:"+top5[2]["Longitude"].toFixed(3));
@@ -146,7 +146,18 @@ function create_list(){
     $('.case4').html(top5[3]["pred-decline"].toFixed(2)+"건")
     $('.case5').html(top5[4]["pred-decline"].toFixed(2)+"건")
     $('.case6').html(top5[5]["pred-decline"].toFixed(2)+"건")
-  })
+    
+    myfunc1(top5[0]["gu_code"])
+    var map = new naver.maps.Map('map', mapOptions); 
+    for(index =0 ; index<top5.length ;index++){
+      var circle = new naver.maps.Circle({
+      map: map,
+      center: new naver.maps.LatLng(top5[index]["Latitude"], top5[index]["Longitude"]),
+      radius: 200,
+      fillColor: 'crimson',
+      fillOpacity: 0.6
+     })
+  };})
   .catch(error=> {
     console.log(error);
   });
