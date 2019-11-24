@@ -29,7 +29,7 @@
 
       <div class = "row justify-content-md-center"> <!-- 중간 전체 -->
         <div class = "col-md-4"> <!-- 왼쪽 칸-->
-          <div class = "row md_left justify-content-md-center"> <!--md_left는 내가 만든 css 변수 -->
+          <div class = "row md_left"> <!--md_left는 내가 만든 css 변수 -->
             <div class = "col-md-4" name = "first_select"> <!-- 첫번째 구 선택 버튼-->
               <select name = "GuName" id = "GuName" onchange="myfunc1(this.options[this.selectedIndex].value)">
                 <option value=""> --서울시 구 선택-- </option>
@@ -74,59 +74,132 @@
             </div>
           </div>
           <div class = "row view_btn"> <!--요인 선택 시 뜨는 위도 경도 좌표 버튼 들어갈 칸 -->
-            <div class="row col-md-11 justify-content-md-around">
+            <div class="row-fluid t_btn">
               <button type="button" class="idx1 btn btn-light btn-lg" disabled>1.</button>
-              <button type="button" class="num1 btn-lg btn_h btn_h--boder" onclick = "view_map(0)">　　　　가장 위험한 곳　　　 </button>
-              <button type="button" class="case1 btn btn-secondary btn-lg" disabled>사고건수</button>
+              <button type="button" class="custom num1 btn-lg btn_h" onclick = "view_map(0)">가장 위험한 곳</button>
+              <button type="button" class="acc_num1 btn btn-danger btn-lg" disabled>사고건수</button>
+              <button type="button" class="case1 btn btn-secondary btn-lg" disabled>변경수</button>
+                            <!--본래 나오던 사고 감소 건수는 변경수 버튼에 나오게 했음-->
+              <button type="button" class="prob1 btn btn-secondary btn-lg" disabled>확률</button>
+
             </div>
 
-            <div class="row col-md-11 justify-content-md-around">
+            <div class="row-fluid t_btn">
               <button type="button" class="idx2 btn btn-light btn-lg" disabled>2.</button>
-              <button type="button" class="num2 btn-lg btn_h btn_h--boder" onclick = "view_map(1)">　　　　두 번째로 위험　　　 </button>
-              <button type="button" class="case2 btn btn-secondary btn-lg" disabled>사고건수</button>
+              <button type="button" class="custom num2 btn-lg btn_h" onclick = "view_map(1)">두 번째로 위험</button>
+              <button type="button" class="acc_num2 btn btn-danger btn-lg" disabled>사고건수</button>
+              <button type="button" class="case2 btn btn-secondary btn-lg" disabled>변경수</button>
+              <button type="button" class="prob2 btn btn-secondary btn-lg" disabled>확률</button>
             </div>
 
-            <div class="row col-md-11 justify-content-md-around">
+            <div class="row-fluid t_btn">
               <button type="button" class="idx3 btn btn-light btn-lg" disabled>3.</button>
-              <button class="num3 btn_h btn_h--boder btn-lg" onclick = "view_map(2)">　　　　세 번째로 위험　　　 <span></span></button>
-              <button type="button" class="case3 btn btn-secondary btn-lg" disabled>사고건수</button>
+              <button type="button" class="custom num3 btn_h btn-lg" onclick = "view_map(2)">세 번째로 위험</button>
+              <button type="button" class="acc_num3 btn btn-danger btn-lg" disabled>사고건수</button>
+              <button type="button" class="case3 btn btn-secondary btn-lg" disabled>변경수</button>
+              <button type="button" class="prob3 btn btn-secondary btn-lg" disabled>확률</button>
             </div>
 
-            <div class="row col-md-11 justify-content-md-around">
+            <div class="row-fluid t_btn">
               <button type="button" class="idx4 btn btn-light btn-lg" disabled>4.</button>
-              <button type="button" class="num4 btn-lg btn_h btn_h--boder" onclick = "view_map(3)">　　　　네 번째로 위험　　　 </button>
-              <button type="button" class="case4 btn btn-secondary btn-lg" disabled>사고건수</button>
+              <button type="button" class="custom num4 btn-lg btn_h" onclick = "view_map(3)">네 번째로 위험</button>
+              <button type="button" class="acc_num4 btn btn-danger btn-lg" disabled>사고건수</button>
+              <button type="button" class="case4 btn btn-secondary btn-lg" disabled>변경수</button>
+              <button type="button" class="prob4 btn btn-secondary btn-lg" disabled>확률</button>
             </div>
 
-            <div class="row col-md-11 justify-content-md-around">
+            <div class="row-fluid t_btn">
               <button type="button" class="idx5 btn btn-light btn-lg" disabled>5.</button>
-              <button type="button" class="num5 btn-lg btn_h btn_h--boder" onclick = "view_map(4)">　　　다섯 번째로 위험　　　 </button>
-              <button type="button" class="case5 btn btn-secondary btn-lg" disabled>사고건수</button>
+              <button type="button" class="custom num5 btn-lg btn_h" onclick = "view_map(4)">다섯 번째로 위험</button>
+              <button type="button" class="acc_num5 btn btn-danger btn-lg" disabled>사고건수</button>
+              <button type="button" class="case5 btn btn-secondary btn-lg" disabled>변경수</button>
+              <button type="button" class="prob5 btn btn-secondary btn-lg" disabled>확률</button>
             </div>
 
-            <div class="row col-md-11 justify-content-md-around">
+            <div class="row-fluid t_btn">
               <button type="button" class="idx6 btn btn-light btn-lg" disabled>6.</button>
-              <button type="button" class="num6 btn-lg btn_h btn_h--boder" onclick = "view_map(5)">　　　여섯 번째로 위험　　　 </button>
-              <button type="button" class="case6 btn btn-secondary btn-lg" disabled>사고건수</button>
+              <button type="button" class="custom num6 btn-lg btn_h" onclick = "view_map(5)">여섯 번째로 위험</button>
+              <button type="button" class="acc_num6 btn btn-danger btn-lg" disabled>사고건수</button>
+              <button type="button" class="case6 btn btn-secondary btn-lg" disabled>변경수</button>
+              <button type="button" class="prob6 btn btn-secondary btn-lg" disabled>확률</button>
             </div>
-            <!-- 원본
-            <div class="row">
-              <button class="num1 btn btn-primary btn-secondary btn-lg btn-block active" onclick = "view_map(0)">1.　　　　 가장 위험한 곳　　　　 </button>
-              <button class="num2 btn btn-primary btn-secondary btn-lg btn-block active" onclick = "view_map(1)">2.　　　　 두 번째로 위험　　　　 </button>
-              <button class="num3 btn btn-primary btn-secondary btn-lg btn-block active" onclick = "view_map(2)">3.　　　　 세 번째로 위험　　　　 </button>
-              <button class="num4 btn btn-primary btn-secondary btn-lg btn-block " onclick = "view_map(3)">4.　　　　 네 번쨰로 위험　　　　 </button>
-              <button class="num5 btn btn-primary btn-secondary btn-lg btn-block " onclick = "view_map(4)">5.　　　　다섯 번째로 위험　 　　</button>
-              <button class="num6 btn btn-primary btn-secondary btn-lg btn-block " onclick = "view_map(5)">6.　　　　여섯 번째로 위험　 　　</button>
-            </div>
-          -->
           </div>
         </div>
 
-        <div class = "col-md-6"> <!-- 오른쪽 -->
+        <div class = "col-md-3">
+          <br>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class = "col-md-5"> <!-- 오른쪽 -->
           <div class = "map">
             <div id = "map" style="width:100%;height:600px;"></div>
           </div>
         </div>
+
+    <!--
+      <div class = "col-md-3">
+          <br>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> -->
 
       <div class="row col-10 offset-md-1 justify-content-center">
         <!-- 여기에 교차로 데이터가 나올 예정 test<br>

@@ -1,5 +1,5 @@
 .container{
-  width: 1200px;
+  width: 100%;
 }
 
 
@@ -22,7 +22,7 @@ select::-ms-expand {
 }
 
 footer {
-  text-align: center ;F
+  text-align: center ;
 
 }
 
@@ -40,6 +40,12 @@ footer {
 }
 
 .case1, .case2, .case3, .case3, .case4, .case4, .case5, .case6 {
+  margin-bottom: 1em;
+}
+.acc_num1, .acc_num2, .acc_num3, .acc_num4, .acc_num5, .acc_num6 {
+  margin-bottom: 1em;
+}
+.prob1, .prob2, .prob3, .prob4, .prob5, .prob6 {
   margin-bottom: 1em;
 }
 
@@ -71,48 +77,13 @@ footer {
   color: green;
 }
 
-.btn_h--border::after, .btn--border::before,
-.btn_h--border span::after,
-.btn_h--border span::before {
-  content: "";
-  position: absolute;
-  background-color: green;
-  transition: 0.5s ease;
+.custom {
+  width: 45%!important;
 }
-.btn_h--border::after, .btn--border::before {
-  height: 100%;
-  width: 2px;
-  top: -2px;
-}
-.btn_h--border::after {
-  left: -2px;
-}
-.btn_h--border::before {
-  right: -2px;
-}
-.btn_h--border span::after,
-.btn_h--border span::before {
-  height: 2px;
-  width: 100%;
-  left: -2px;
-}
-.btn_h--border span::after {
-  top: -2px;
-}
-.btn_h--border span::before {
-  bottom: -2px;
-}
-.btn_h--border:hover:after {
-  transform: translatex(10px);
-}
-.btn_h--border:hover:before {
-  transform: translatex(-10px);
-}
-.btn_h--border:hover span::after {
-  transform: translatey(10px);
-}
-.btn_h--border:hover span::before {
-  transform: translatey(-10px);
+.t_btn {
+  justify-content: space-around;
+  vertical-align: middle;
+  height: 80px
 }
 /*
 .btn--border::after, .btn--border::before,
