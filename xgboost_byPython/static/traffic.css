@@ -4,11 +4,11 @@
 
 
 select {
-width: 180px;
+width: 8rem;
 padding: .8rem .5rem;
 border: 1px solid #999;
 font-family: inherit;
-background: url({{ url_for('static', filename='.jpg') }}), no-repeat 95% 50%;
+background: url(arrow.jpg) no-repeat 95% 50%;
 border-radius: 5px;
 -webkit-appearance: none;
 -moz-appearance: none;
@@ -22,7 +22,7 @@ select::-ms-expand {
 }
 
 footer {
-  text-align: center ;
+  text-align: right ;
 
 }
 
@@ -80,10 +80,27 @@ footer {
 .custom {
   width: 45%!important;
 }
+.custom_acc {
+  width: 17%!important;
+}
+.custom_chn {
+  width: 13%!important;
+}
+.custom_prob {
+  width: 11%!important;
+}
+
 .t_btn {
   justify-content: space-around;
   vertical-align: middle;
   height: 80px
+}
+.list-group-horizontal {
+  flex-direction: row;
+}
+
+.tbname {
+  font-size: large;
 }
 /*
 .btn--border::after, .btn--border::before,
