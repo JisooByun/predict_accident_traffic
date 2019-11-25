@@ -85,6 +85,13 @@ footer {
   vertical-align: middle;
   height: 80px
 }
+.list-group-horizontal {
+  flex-direction: row;
+}
+
+.tbname {
+  font-size: X-large;
+}
 /*
 .btn--border::after, .btn--border::before,
 .btn--border span::after,
