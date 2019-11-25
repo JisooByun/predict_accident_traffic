@@ -26,12 +26,12 @@ def return_top5_cross(GuName,factor,value):
 
     pred_ori = xgboost_001.predict(df_process)
     df["pred_ori"] = pred_ori
-    #여기까지가 요인변경 안한 데이터로 모델에 넣어 얻은 값을 pre_ori 칼럼에 넣음
+    
     print("------------------pre_ori column add at df------------------")
     print(df)
     df_process[factor] = df_process[factor] + value
     for j in range(len(df["gu_code"])):
-         if(df_process[factor][j]< 0): #만약 value로 뺏을때 (-) 가 나온다면 그 부분만 0으로 바꿈
+         if(df_process[factor][j]< 0): 
              df_process[factor][j] = 0
     print("------------------checkout changed factor ------------------")
     print(df[factor])
@@ -46,7 +46,7 @@ def return_top5_cross(GuName,factor,value):
     df = df.sort_values("pred-decline")
 
     row_num =[]
-    for i in range(len(df["gu_code"])): #정렬시킨뒤 순위정해줌
+    for i in range(len(df["gu_code"])): 
         row_num.append(i+1)
     df["rank"]= row_num
     print("------------------rank add at df column------------------")
@@ -55,8 +55,7 @@ def return_top5_cross(GuName,factor,value):
     x = df
     print("------------------finally data (send to web)------------------")
     print(x)
-    # rmse = np.sqrt(mean_squared_error(df["pred_ori2"], df["acc_count"]))
-    # print(rmse)
+
     json_x = x.to_json(orient='table')
     return json_x
-# return_top5_cross("AA","trafficlight_num",1) #테스트 데이터
+# return_top5_cross("AA","trafficlight_num",1) #test data
