@@ -1,10 +1,14 @@
 
 
-from flask import Flask, request,jsonify
+from flask import Flask, request,jsonify,render_template
 from flask_cors import CORS
 import data_from_sql
 app = Flask(__name__)
 CORS(app)
+@app.route('/')
+def introduce():
+    return render_template('traffic.html')
+
 @app.route('/test',methods = ['POST'])
 def hello():
 
