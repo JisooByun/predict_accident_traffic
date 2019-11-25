@@ -164,7 +164,7 @@
           </thead>
           <tbody>
             <tr>
-              <td scope="row">　</td> <!--구 이름 나오게 할 수 있을까요?-->
+              <td scope="row" data-toggle="modal" data-target="#traffic-chart"><img src = "ico_barchart.png"></td>
               <td>교차로</td>
               <td>위치</td>
               <td>신호등</td>
@@ -178,24 +178,40 @@
               <td>지하철(300m내)</td>
             </tr>
 
-            </tr>
           </tbody>
         </table>
       </div>
     </div>
 
       <!-- 마지막? -->
-      <footer >
+      <footer>
         seocho-KAIST @2019
       </footer>
     </div>
-
-
-
+<!--모달 레이아웃-->
+    <div class="modal fade" id="traffic-chart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            차트 들어갈 곳
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
   <!-- script part -->
-  <script src ="traffic.js"></script>
   <script src="bootstrap.js"></script>
+  <script src ="traffic.js"></script>
 
 </body>
 </html>
