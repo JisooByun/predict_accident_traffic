@@ -29,10 +29,10 @@
 
       <div class = "row justify-content-md-center"> <!-- 중간 전체 -->
         <div class = "col-md-5"> <!-- 왼쪽 칸-->
-          <div class = "row md_left"> <!--md_left는 내가 만든 css 변수 -->
-            <div class = "col-md-4" name = "first_select"> <!-- 첫번째 구 선택 버튼-->
+          <div class = "row md_left justify-content-md-center"> <!--md_left는 내가 만든 css 변수 -->
+            <div class = "col-md-3 offset-md-2" name = "first_select"> <!-- 첫번째 구 선택 버튼-->
               <select name = "GuName" id = "GuName" onchange="myfunc1(this.options[this.selectedIndex].value)">
-                <option value=""> --서울시 구 선택-- </option>
+                <option value=""> --구 선택-- </option>
                 <option value="AA"> 강남구 </option>
                 <option value="BB"> 강동구 </option>
                 <option value="CC"> 강북구 </option>
@@ -61,9 +61,9 @@
               </select>
             </div>
 
-            <div class = "col-md-8" name = "second_select"> <!-- 두번째 요인 선택 -->
+            <div class = "col-md-7" name = "second_select"> <!-- 두번째 요인 선택 -->
               <select name = "factor" id = "factor" onchange="myfunc2(this.options[this.selectedIndex].value)">
-                <option value="" selected="selected"> --요인 변경사항--</option>
+                <option value="" selected="selected">-요인 변경-</option>
                 <option value="trafficlight_num">신호등</a>
                 <option value="mean_maxspeed">최대속도</a>
               </select>
@@ -77,51 +77,51 @@
             <div class="row-fluid t_btn">
               <button type="button" class="idx1 btn btn-light btn-lg" disabled>1.</button>
               <button type="button" class="custom num1 btn-lg btn_h" onclick = "view_map(0)">가장 위험한 곳</button>
-              <button type="button" class="acc_num1 btn btn-danger btn-lg" disabled>사고건수</button>
-              <button type="button" class="case1 btn btn-secondary btn-lg" disabled>변경수</button>
+              <button type="button" class="custom_acc acc_num1 btn btn-danger btn-lg" disabled>사고건수</button>
+              <button type="button" class="custom_chn case1 btn btn-secondary btn-lg" disabled>변경수</button>
                             <!--본래 나오던 사고 감소 건수는 변경수 버튼에 나오게 했음-->
-              <button type="button" class="prob1 btn btn-secondary btn-lg" disabled>확률</button>
+              <button type="button" class="custom_prob prob1 btn btn-secondary btn-lg" disabled>확률</button>
 
             </div>
 
             <div class="row-fluid t_btn">
               <button type="button" class="idx2 btn btn-light btn-lg" disabled>2.</button>
-              <button type="button" class="custom num2 btn-lg btn_h" onclick = "view_map(1)">두 번째로 위험</button>
-              <button type="button" class="acc_num2 btn btn-danger btn-lg" disabled>사고건수</button>
-              <button type="button" class="case2 btn btn-secondary btn-lg" disabled>변경수</button>
-              <button type="button" class="prob2 btn btn-secondary btn-lg" disabled>확률</button>
+              <button type="button" class="custom num2 btn-lg btn-md btn_h" onclick = "view_map(1)">두 번째로 위험</button>
+              <button type="button" class="custom_acc acc_num2 btn btn-danger btn-lg" disabled>사고건수</button>
+              <button type="button" class="custom_chn case2 btn btn-secondary btn-lg" disabled>변경수</button>
+              <button type="button" class="custom_prob prob2 btn btn-secondary btn-lg" disabled>확률</button>
             </div>
 
             <div class="row-fluid t_btn">
               <button type="button" class="idx3 btn btn-light btn-lg" disabled>3.</button>
               <button type="button" class="custom num3 btn_h btn-lg" onclick = "view_map(2)">세 번째로 위험</button>
-              <button type="button" class="acc_num3 btn btn-danger btn-lg" disabled>사고건수</button>
-              <button type="button" class="case3 btn btn-secondary btn-lg" disabled>변경수</button>
-              <button type="button" class="prob3 btn btn-secondary btn-lg" disabled>확률</button>
+              <button type="button" class="custom_acc acc_num3 btn btn-danger btn-lg" disabled>사고건수</button>
+              <button type="button" class="custom_chn case3 btn btn-secondary btn-lg" disabled>변경수</button>
+              <button type="button" class="custom_prob prob3 btn btn-secondary btn-lg" disabled>확률</button>
             </div>
 
             <div class="row-fluid t_btn">
               <button type="button" class="idx4 btn btn-light btn-lg" disabled>4.</button>
               <button type="button" class="custom num4 btn-lg btn_h" onclick = "view_map(3)">네 번째로 위험</button>
-              <button type="button" class="acc_num4 btn btn-danger btn-lg" disabled>사고건수</button>
-              <button type="button" class="case4 btn btn-secondary btn-lg" disabled>변경수</button>
-              <button type="button" class="prob4 btn btn-secondary btn-lg" disabled>확률</button>
+              <button type="button" class="custom_acc acc_num4 btn btn-danger btn-lg" disabled>사고건수</button>
+              <button type="button" class="custom_chn case4 btn btn-secondary btn-lg" disabled>변경수</button>
+              <button type="button" class="custom_prob prob4 btn btn-secondary btn-lg" disabled>확률</button>
             </div>
 
             <div class="row-fluid t_btn">
               <button type="button" class="idx5 btn btn-light btn-lg" disabled>5.</button>
               <button type="button" class="custom num5 btn-lg btn_h" onclick = "view_map(4)">다섯 번째로 위험</button>
-              <button type="button" class="acc_num5 btn btn-danger btn-lg" disabled>사고건수</button>
-              <button type="button" class="case5 btn btn-secondary btn-lg" disabled>변경수</button>
-              <button type="button" class="prob5 btn btn-secondary btn-lg" disabled>확률</button>
+              <button type="button" class="custom_acc acc_num5 btn btn-danger btn-lg" disabled>사고건수</button>
+              <button type="button" class="custom_chn case5 btn btn-secondary btn-lg" disabled>변경수</button>
+              <button type="button" class="custom_prob prob5 btn btn-secondary btn-lg" disabled>확률</button>
             </div>
 
             <div class="row-fluid t_btn">
               <button type="button" class="idx6 btn btn-light btn-lg" disabled>6.</button>
               <button type="button" class="custom num6 btn-lg btn_h" onclick = "view_map(5)">여섯 번째로 위험</button>
-              <button type="button" class="acc_num6 btn btn-danger btn-lg" disabled>사고건수</button>
-              <button type="button" class="case6 btn btn-secondary btn-lg" disabled>변경수</button>
-              <button type="button" class="prob6 btn btn-secondary btn-lg" disabled>확률</button>
+              <button type="button" class="custom_acc acc_num6 btn btn-danger btn-lg" disabled>사고건수</button>
+              <button type="button" class="custom_chn case6 btn btn-secondary btn-lg" disabled>변경수</button>
+              <button type="button" class="custom_prob prob6 btn btn-secondary btn-lg" disabled>확률</button>
             </div>
           </div>
         </div>
