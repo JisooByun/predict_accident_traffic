@@ -4,20 +4,30 @@
 
 
 select {
-width: 8rem;
-padding: .8rem .5rem;
+width: 11rem;
+padding: .6rem .4rem;
 border: 1px solid #999;
 font-family: inherit;
 background: url(arrow.jpg) no-repeat 95% 50%;
-border-radius: 5px;
+border-radius: 3px;
 -webkit-appearance: none;
 -moz-appearance: none;
 appearance: none;
 align: middle;
 
 }
+input {
+  padding: .8rem .5rem;
+  border: 1px solid #999;
+  font-family: inherit;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  align: middle;
 
-select::-ms-expand {
+}
+input, select::-ms-expand {
     display: none;
 }
 
@@ -102,6 +112,18 @@ footer {
 .tbname {
   font-size: large;
 }
+
+.plus, .minus {
+  font-size: large;
+  width: 1.7rem;
+  vertical-align: bottom;
+}
+
+.doit {
+  height: 2.1rem;
+  vertical-align: bottom;
+}
+
 /*
 .btn--border::after, .btn--border::before,
 .btn--border span::after,

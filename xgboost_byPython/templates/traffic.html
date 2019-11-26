@@ -32,9 +32,9 @@
       <div class = "row justify-content-md-center"> <!-- 중간 전체 -->
         <div class = "col-md-5"> <!-- 왼쪽 칸-->
           <div class = "row md_left justify-content-md-center"> <!--md_left는 내가 만든 css 변수 -->
-            <div class = "col-md-3 offset-md-2" name = "first_select"> <!-- 첫번째 구 선택 버튼-->
+            <div class = "col-md-4 offset-md-1" name = "first_select"> <!-- 첫번째 구 선택 버튼-->
               <select name = "GuName" id = "GuName" onchange="myfunc1(this.options[this.selectedIndex].value)">
-                <option value=""> --구 선택-- </option>
+                <option value=""> --서울 시 구 선택-- </option>
                 <option value="AA"> 강남구 </option>
                 <option value="BB"> 강동구 </option>
                 <option value="CC"> 강북구 </option>
@@ -65,14 +65,14 @@
 
             <div class = "col-md-7" name = "second_select"> <!-- 두번째 요인 선택 -->
               <select name = "factor" id = "factor" onchange="myfunc2(this.options[this.selectedIndex].value)">
-                <option value="" selected="selected">-요인 변경-</option>
+                <option value="" selected="selected">--요인 변경사항--</option>
                 <option value="trafficlight_num">신호등</a>
                 <option value="mean_maxspeed">최대속도</a>
               </select>
-              <input type="text" class ="text_num" style="text-align:center; width:50px; height:30px;">
-              <button onclick="plus()">+</button>
-              <button onclick="minus()">-</button>
-              <button class="btn btn-default" onclick="create_list()" >실행</button>
+              <input type="text" class ="text_num" style="text-align:center; width:2rem; height: 2.8rem;">
+              <button onclick="plus()" class="plus">+</button>
+              <button onclick="minus()" class="minus">-</button>
+              <button class="doit" onclick="create_list()" >실행</button>
             </div>
           </div>
           <div class = "row view_btn"> <!--요인 선택 시 뜨는 위도 경도 좌표 버튼 들어갈 칸 -->
