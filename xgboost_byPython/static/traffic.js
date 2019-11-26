@@ -125,7 +125,7 @@ function minus(){
 }  
 
 function create_list(){
-  axios.post('http://13.125.229.11:5000/test', {
+  axios.post('http://localhost:5000/test', {
     GuName: GuName_select,
     factor: factor_select,
     value : number_factor
@@ -142,21 +142,15 @@ function create_list(){
     }
     myfunc1(top5[0]["gu_code"])
     var map = new naver.maps.Map('map', mapOptions); 
-    // for(index =0 ; index<top5.length ;index++){
-    //   var circle = new naver.maps.Circle({
-    //   map: map,
-    //   center: new naver.maps.LatLng(top5[index]["Latitude"], top5[index]["Longitude"]),
-    //   radius: 100+300*(top5[index]["acc_count"]/250),
-    //   fillColor: 'crimson',
-    //   fillOpacity: 0.2+1.5*(top5[index]["acc_count"]/250)
-  //    })
-  // };
-  for(index =0 ; index<top5.length ;index++){
-    var heatmap = new naver.maps.visualization.HeatMap({
-        map: map,
-        data: new naver.maps.visualization.WeightedLocation(top5[index]["Latitude"], top5[index]["Longitude"]),
-        colorMap: naver.maps.visualization.SpectrumStyle.HOT})}
-    
+    for(index =0 ; index<top5.length ;index++){
+      var circle = new naver.maps.Circle({
+      map: map,
+      center: new naver.maps.LatLng(top5[index]["Latitude"], top5[index]["Longitude"]),
+      radius: 100+300*(top5[index]["acc_count"]/250),
+      fillColor: 'crimson',
+      fillOpacity: 0.2+1.5*(top5[index]["acc_count"]/250)
+     })
+  };
 })
 
   .catch(error=> {
