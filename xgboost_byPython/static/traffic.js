@@ -125,7 +125,7 @@ function minus(){
 }  
 
 function create_list(){
-  axios.post('http://localhost:5000/test', {
+  axios.post('/test', {
     GuName: GuName_select,
     factor: factor_select,
     value : number_factor
