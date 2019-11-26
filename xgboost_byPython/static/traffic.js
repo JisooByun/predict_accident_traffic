@@ -125,7 +125,7 @@ function minus(){
 }  
 
 function create_list(){
-  axios.post('/test', {
+  axios.post('http://13.125.229.11:5000/test', {
     GuName: GuName_select,
     factor: factor_select,
     value : number_factor
