@@ -7,7 +7,7 @@ import numpy as np
 def return_top5_cross(GuName,factor,value):
 
 
-    connection = pymysql.connect('localhost' ,'root','123123','dev')
+    connection = pymysql.connect('localhost' ,'root','traffic123','dev')
 
     cursor = connection.cursor()
     get_Gu = "select * from traffic where gu_code=%s"

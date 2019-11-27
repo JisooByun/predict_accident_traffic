@@ -23,7 +23,7 @@
         <!-- Image and text -->
         <nav class="navbar navbar-light bg-light justify-content-md-center">
           <a class="navbar-brand" href="traffic.html">
-            <img src="pr_title.png" class="d-inline-block align-top" alt="">
+            <img src="{{ url_for('static',filename='pr_title.png') }}" class="d-inline-block align-top" alt="">
             <font size="15rem"><b>　Traffic Accident Analysis</b></font>
           </a>
         </nav>
@@ -166,7 +166,7 @@
           </thead>
           <tbody>
             <tr>
-              <td scope="row" data-toggle="modal" data-target="#traffic-chart"><img src = "ico_barchart.png"></td>
+              <td scope="row" data-toggle="modal" data-target="#traffic-chart"><img src = "{{ url_for('static',filename='ico_barchart.png') }}"></td>
               <td>교차로</td>
               <td>위치</td>
               <td>신호등</td>
