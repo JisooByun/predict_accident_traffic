@@ -99,27 +99,37 @@ function myfunc2(val){
 }
 
 function plus(){
-  if(factor_select == "trafficlight_num"){
-    if(number_factor < 3){
+  if(factor_select == "trafficlight_num"||factor_select == "crosswalk_num"||factor_select == "mean_lane"){
+    if(number_factor < 2){
       number_factor = number_factor +1 ;
       console.log(number_factor)
     }
   }
-  else if(factor_select == "mean_maxspeed"){
-    if(number_factor<30){
-    number_factor = number_factor +10}
+  else if(factor_select == "mean_roadwth"){
+    if(number_factor<10){
+    number_factor = number_factor +5}
+  }else if(factor_select=="mediansep_num"||factor_select=="island_num"||factor_select=="school_num"){
+    if(number_factor<1){
+      number_factor = number_factor +1
+    }
   }
   $(".text_num").val(number_factor)
 }
 
 function minus(){
-  if(factor_select == "trafficlight_num"){
-    if(number_factor > -3){
-    number_factor = number_factor -1}
+  if(factor_select == "trafficlight_num"||factor_select == "crosswalk_num"||factor_select == "mean_lane"){
+    if(number_factor > -2){
+      number_factor = number_factor -1 ;
+      console.log(number_factor)
+    }
   }
-  else if(factor_select == "mean_maxspeed"){
-    if(number_factor > -30){
-    number_factor = number_factor -10}
+  else if(factor_select == "mean_roadwth"){
+    if(number_factor>-10){
+    number_factor = number_factor -5}
+  }else if(factor_select=="mediansep_num"||factor_select=="island_num"||factor_select=="school_num"){
+    if(number_factor>-1){
+      number_factor = number_factor -1
+    }
   }
   $(".text_num").val(number_factor)
 }  
@@ -152,11 +162,12 @@ function create_list(){
      })
   };
 })
-
   .catch(error=> {
     console.log(error);
   });
 };
+
+
 
 function view_map(index){
   var mapOptions = {

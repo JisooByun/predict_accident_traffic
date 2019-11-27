@@ -67,12 +67,17 @@
               <select name = "factor" id = "factor" onchange="myfunc2(this.options[this.selectedIndex].value)">
                 <option value="" selected="selected">--요인 변경사항--</option>
                 <option value="trafficlight_num">신호등</a>
-                <option value="mean_maxspeed">최대속도</a>
+                <option value="crosswalk_num">횡단보도</a>
+                <option value="mean_lane">차로 수</a>
+                <option value="mediansep_num">중앙분리대</a>
+                <option value="school_num">학교수</a>
+                <option value="island_num">교통섬</a>
+                <option value="mean_roadwth">도로폭</a>
               </select>
               <input type="text" class ="text_num" style="text-align:center; width:2rem; height: 2.8rem;">
               <button onclick="plus()" class="plus">+</button>
               <button onclick="minus()" class="minus">-</button>
-              <button class="doit" onclick="create_list()" >실행</button>
+              <button class="doit" onclick="create_list();create_list2();" >실행</button>
             </div>
           </div>
           <div class = "row view_btn"> <!--요인 선택 시 뜨는 위도 경도 좌표 버튼 들어갈 칸 -->
@@ -217,6 +222,19 @@
 
   <!-- <script src="bootstrap.js"></script> -->
   <!-- <script src ="traffic.js"></script> -->
-
+  <script>function create_list2(){
+    axios.post('http://localhost:5000/graph', {
+    GuName: GuName_select,
+    factor: factor_select
+    })
+    .then(response=> {
+    graph_datas = JSON.parse(response.data)
+    graph5 = graph_datas.data
+    console.log(graph5)
+    })
+    .catch(error=> {
+        console.log(error);
+      });
+}</script>
 </body>
 </html>
