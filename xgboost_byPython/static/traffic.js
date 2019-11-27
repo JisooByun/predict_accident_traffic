@@ -126,6 +126,9 @@ function minus(){
 
 function create_list(){
   axios.post('http://13.125.229.11:5000/test', {
+    headers: {
+	  'Access-Control-Allow-Origin': '*',
+	},
     GuName: GuName_select,
     factor: factor_select,
     value : number_factor
