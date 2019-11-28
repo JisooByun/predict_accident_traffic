@@ -56,7 +56,7 @@ def return_graph_data(GuName,factor):
     print("------------------pred-decline = pred_factor - pred_ori------------------")
     print(df)
     # acc_num 으로 내림차순 sort하기  
-    df = df.sort_values(["acc_count"],ascending=[False])
+    df = df.sort_values(["pred_ori"],ascending=[False])
 
     row_num =[]
     for i in range(len(df["gu_code"])): 
@@ -65,7 +65,7 @@ def return_graph_data(GuName,factor):
     print("------------------rank add at df column------------------")
     print(df)
 
-    x = df.loc[:,"acc_count":]
+    x = df.loc[:,"pred_ori":]
     print("------------------finally data (send to web)------------------")
     print(x)
 
