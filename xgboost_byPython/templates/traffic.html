@@ -156,8 +156,8 @@
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">교차로</th>
-              <th scope="col">위치</th>
+              <th scope="col">위도</th>
+              <th scope="col">경도</th>
               <th scope="col">신호등</th>
               <th scope="col">횡단보도</th>
               <th scope="col">차로 수</th>
@@ -172,17 +172,17 @@
           <tbody>
             <tr>
               <td scope="row" data-toggle="modal" data-target="#traffic-chart"><img src = "{{ url_for('static',filename='ico_barchart.png') }}"></td>
-              <td>교차로</td>
-              <td>위치</td>
-              <td>신호등</td>
-              <td>횡단보도</td>
-              <td>차로 수</td>
-              <td>제한속도</td>
-              <td>교통섬</td>
-              <td>중앙분리대</td>
-              <td>학교(300m내)</td>
-              <td>경찰서(300m내)</td>
-              <td>지하철(300m내)</td>
+              <td class ="info1">교차로</td>
+              <td class ="info2">위치</td>
+              <td class ="info3">신호등</td>
+              <td class ="info4">횡단보도</td>
+              <td class ="info5">차로 수</td>
+              <td class ="info6">제한속도</td>
+              <td class ="info7">교통섬</td>
+              <td class ="info8">중앙분리대</td>
+              <td class ="info9">학교(300m내)</td>
+              <td class ="info10">경찰서(300m내)</td>
+              <td class ="info11">지하철(300m내)</td>
             </tr>
 
           </tbody>
@@ -235,6 +235,8 @@
     .catch(error=> {
         console.log(error);
       });
-}</script>
+}
+
+</script>
 </body>
 </html>

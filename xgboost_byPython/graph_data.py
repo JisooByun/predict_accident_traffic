@@ -48,7 +48,7 @@ def return_graph_data(GuName,factor):
         print(df[factor])
         print(df_process[factor])
         pred_factor = xgboost_001.predict(df_process)
-        df[factor+str(value)] = pred_factor
+        df[str(value)] = pred_factor
         df_process[factor] =df_process_ori
         # df["pred-decline"] = df["pred_factor"]-df["pred_ori"]
         # df["pred-decline"] = round(df["pred-decline"],2)
@@ -70,5 +70,6 @@ def return_graph_data(GuName,factor):
     print(x)
 
     json_x = x.to_json(orient='table')
+    print(json_x)
     return json_x
-# return_graph_data("AA","trafficlight_num") #test data
+return_graph_data("AA","trafficlight_num") #test data

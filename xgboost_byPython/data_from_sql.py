@@ -1,6 +1,7 @@
 import pymysql
 import pandas as pd
 import joblib
+import json
 from sklearn.metrics import mean_squared_error
 import numpy as np
 # Guname = AA,BB,CC..... factor: light_num,schoolnum.... value 1,2,3,10,20....
@@ -26,12 +27,12 @@ def return_top5_cross(GuName,factor,value):
 
     pred_ori = xgboost_001.predict(df_process)
     df["pred_ori"] = pred_ori
-    
+
     print("------------------pre_ori column add at df------------------")
     print(df)
     df_process[factor] = df_process[factor] + value
     for j in range(len(df["gu_code"])):
-         if(df_process[factor][j]< 0): 
+         if(df_process[factor][j]< 0):
              df_process[factor][j] = 0
     print("------------------checkout changed factor ------------------")
     print(df[factor])
@@ -46,7 +47,7 @@ def return_top5_cross(GuName,factor,value):
     df = df.sort_values("pred-decline")
 
     row_num =[]
-    for i in range(len(df["gu_code"])): 
+    for i in range(len(df["gu_code"])):
         row_num.append(i+1)
     df["rank"]= row_num
     print("------------------rank add at df column------------------")
@@ -57,5 +58,7 @@ def return_top5_cross(GuName,factor,value):
     print(x)
 
     json_x = x.to_json(orient='table')
+    print(json_x)
+
     return json_x
 # return_top5_cross("AA","trafficlight_num",1) #test data

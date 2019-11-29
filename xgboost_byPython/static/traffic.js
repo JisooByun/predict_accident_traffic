@@ -170,6 +170,18 @@ function create_list(){
 
 
 function view_map(index){
+  $(".info1").html(top5[index]["Latitude"].toFixed(3))
+  $(".info2").html(top5[index]["Longitude"].toFixed(3))
+  $(".info3").html(top5[index]["trafficlight_num"])
+  $(".info4").html(top5[index]["crosswalk_num"])
+  $(".info5").html(top5[index]["mean_lane"].toFixed(1))
+  $(".info6").html(top5[index]["mean_maxspeed"])
+  $(".info7").html(top5[index]["island_num"])
+  $(".info8").html(top5[index]["mediansep_num"])
+  $(".info9").html(top5[index]["school_num"])
+  $(".info10").html(top5[index][""])
+  $(".info11").html(top5[index]["station_num"])
+
   var mapOptions = {
   center: new naver.maps.LatLng(top5[index]["Latitude"], top5[index]["Longitude"]),
   zoom: 12
@@ -184,3 +196,4 @@ function view_map(index){
     fillOpacity: 0.6
 });
 }
+
