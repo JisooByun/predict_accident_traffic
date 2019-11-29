@@ -15,47 +15,49 @@ appearance: none;
 align: middle;
 
 }
-input {
-  padding: .8rem .5rem;
-  border: 1px solid #999;
-  font-family: inherit;
-  border-radius: 3px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  align: middle;
-
-}
-input, select::-ms-expand {
+select::-ms-expand {
     display: none;
 }
 
 footer {
-  text-align: right ;
-
+  text-align: right;
+  margin-right: 8rem;
 }
 
 .md_left {
-  margin-bottom: 2.5em;
+  margin-bottom: 0.5em;
   margin-top: 2em;
 }
-
-.num1, .num2, .num3, .num4, .num5, .num6 {
-  margin-bottom: 1em;
+.txt_title {
+  text-align: center;
+}
+.sub_outcom {
+  margin-top: 0.3em;
+  padding-left: 1.5em;
 }
 
-.idx1, .idx2, .idx3, .idx4, .idx5, .idx6 {
-  margin-bottom: 1em;
+.num1, .idx1, .case1, .acc_num1, .prob1 {
+  margin-top: -1em;
 }
 
-.case1, .case2, .case3, .case3, .case4, .case4, .case5, .case6 {
-  margin-bottom: 1em;
+.num2, .idx2, .case2, .acc_num2, .prob2 {
+  margin-top: -1.5em;
 }
-.acc_num1, .acc_num2, .acc_num3, .acc_num4, .acc_num5, .acc_num6 {
-  margin-bottom: 1em;
+
+.num3, .idx3, .case3, .acc_num3, .prob3 {
+  margin-top: -2.5em;
 }
-.prob1, .prob2, .prob3, .prob4, .prob5, .prob6 {
-  margin-bottom: 1em;
+
+.num4, .idx4, .case4, .acc_num4, .prob4 {
+  margin-top: -3.5em;
+}
+
+.num5, .idx5, .case5, .acc_num5, .prob5 {
+  margin-top: -4.5em;
+}
+
+.num6, .idx6, .case6, .acc_num6, .prob6 {
+  margin-top: -5.5em;
 }
 
 .view_btn {
@@ -86,23 +88,32 @@ footer {
   color: green;
 }
 
+.title {
+  border: none!important;
+  background-color: white!important;
+  color: black!important;
+}
+
 .custom {
-  width: 45%!important;
+  width: 44%!important;
 }
 .custom_acc {
   width: 17%!important;
 }
 .custom_chn {
-  width: 13%!important;
+  width: 14%!important;
 }
 .custom_prob {
-  width: 11%!important;
+  width: 15%!important;
+}
+.sub_outcom {
+  margin-right: 4rem;
 }
 
 .t_btn {
   justify-content: space-around;
   vertical-align: middle;
-  height: 80px
+  height: 5rem;
 }
 .list-group-horizontal {
   flex-direction: row;
@@ -110,6 +121,11 @@ footer {
 
 .tbname {
   font-size: large;
+}
+
+.left_tb {
+  border: 3px;
+  border-color: #000;
 }
 
 .plus, .minus {
@@ -122,49 +138,3 @@ footer {
   height: 2.1rem;
   vertical-align: bottom;
 }
-
-/*
-.btn--border::after, .btn--border::before,
-.btn--border span::after,
-.btn--border span::before {
- content: "";
- position: absolute;
- background-color: white;
- transition: 0.5s ease;
-}
-.btn--border::after, .btn--border::before {
- height: 100%;
- width: 2px;
- top: -2px;
-}
-.btn--border::after {
- left: -2px;
-}
-.btn--border::before {
- right: -2px;
-}
-.btn--border span::after,
-.btn--border span::before {
- height: 2px;
- width: 100%;
- left: -2px;
-}
-.btn--border span::after {
- top: -2px;
-}
-.btn--border span::before {
- bottom: -2px;
-}
-.btn--border:hover:after {
- transform: translatex(-12px);
-}
-.btn--border:hover:before {
- transform: translatex(12px);
-}
-.btn--border:hover span::after {
- transform: translatey(-12px);
-}
-.btn--border:hover span::before {
- transform: translatey(12px);
-}
-*/

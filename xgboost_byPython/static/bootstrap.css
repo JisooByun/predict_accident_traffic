@@ -425,7 +425,7 @@ hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 2px solid rgba(0, 0, 0, 0.5);
 }
 
 small,
@@ -1523,7 +1523,7 @@ pre code {
 .table th,
 .table td {
   padding: 0.75rem;
-  vertical-align: top;
+  vertical-align: center;
   border-top: 1px solid #dee2e6;
 }
 
@@ -1546,12 +1546,12 @@ pre code {
 }
 
 .table-bordered {
-  border: 1px solid #dee2e6;
+  border: 2px solid #dee2e6;
 }
 
 .table-bordered th,
 .table-bordered td {
-  border: 1px solid #dee2e6;
+  border: 2px solid #dee2e6;
 }
 
 .table-bordered thead th,
@@ -2555,7 +2555,7 @@ fieldset:disabled a.btn {
 .btn-light.disabled, .btn-light:disabled {
   color: #212529;
   background-color: #f8f9fa;
-  border-color: #f8f9fa;
+  border-color: #40474d;
 }
 
 .btn-light:not(:disabled):not(.disabled):active, .btn-light:not(:disabled):not(.disabled).active,
@@ -6133,7 +6133,7 @@ button.bg-danger:focus {
 }
 
 .bg-light {
-  background-color: #f8f9fa !important;
+  background-color: #fff !important;
 }
 
 a.bg-light:hover, a.bg-light:focus,
