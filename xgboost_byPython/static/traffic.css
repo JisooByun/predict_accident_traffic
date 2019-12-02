@@ -95,13 +95,13 @@ footer {
 }
 
 .custom {
-  width: 44%!important;
+  width: 42%!important;
 }
 .custom_acc {
-  width: 17%!important;
+  width: 16%!important;
 }
 .custom_chn {
-  width: 14%!important;
+  width: 17%!important;
 }
 .custom_prob {
   width: 15%!important;
@@ -130,11 +130,12 @@ footer {
 
 .plus, .minus {
   font-size: large;
-  width: 1.7rem;
+  width: 1.9rem;
+  height: 2.8rem;
   vertical-align: bottom;
 }
 
 .doit {
-  height: 2.1rem;
+  height: 2.8rem;
   vertical-align: bottom;
 }
