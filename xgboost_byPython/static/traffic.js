@@ -135,6 +135,14 @@ function minus(){
 }  
 
 function create_list(){
+  if(typeof factor_select === "undefined"){
+  isloading.stop();
+  alert("요인을 선택해주세요");
+  }else if(typeof GuName_select === "undefined"){
+  isloading.stop();
+  alert("구를 선택해주세요");
+  }
+  else{
   axios.post('http://localhost:5000/test', {
     GuName: GuName_select,
     factor: factor_select,
@@ -144,6 +152,7 @@ function create_list(){
     top5_datas = JSON.parse(response.data)
     top5 = top5_datas.data
     console.log(top5)
+    isloading.stop()
     for(i = 0; i<6; i++){
     $('.num'+(i+1)).html("위도:"+top5[i]["Latitude"].toFixed(3)+" 경도:"+top5[i]["Longitude"].toFixed(3));
     $('.acc_num'+(i+1)).html(top5[i]["acc_count"].toFixed(0)+"건")
@@ -164,12 +173,13 @@ function create_list(){
 })
   .catch(error=> {
     console.log(error);
-  });
+  });}
 };
 
 
 
 function view_map(index){
+  $(".info0").html(index+1)
   $(".info1").html(top5[index]["Latitude"].toFixed(3))
   $(".info2").html(top5[index]["Longitude"].toFixed(3))
   $(".info3").html(top5[index]["trafficlight_num"])
@@ -196,4 +206,79 @@ function view_map(index){
     fillOpacity: 0.6
 });
 }
+function create_list2(){
+    axios.post('http://localhost:5000/graph', {
+    GuName: GuName_select,
+    factor: factor_select
+    })
+    .then(response=> {
+    graph_datas = JSON.parse(response.data)
+    graph5 = graph_datas.data
+    console.log(graph5)
+    })
+    .catch(error=> {
+        console.log(error);
+      });
+}
+
+isloading = {
+  start: function() {
+    if (document.getElementById('wfLoading')) {
+      return;
+    }
+    var ele = document.createElement('div');
+    ele.setAttribute('id', 'wfLoading');
+    ele.classList.add('loading-layer');
+    ele.innerHTML = '<span class="loading-wrap"><span class="loading-text"><span>.</span><span>.</span><span>.</span></span></span>';
+    document.body.append(ele);
+
+    // Animation
+    ele.classList.add('active-loading');
+  },
+  stop: function() {
+    var ele = document.getElementById('wfLoading');
+    if (ele) {
+      ele.remove();
+    }
+  }
+}
+
+
+//function LoadingWithMask() {
+//    //화면의 높이와 너비를 구합니다.
+//    var maskHeight = $(document).height();
+//    var maskWidth  = window.document.body.clientWidth;
+//
+//    //화면에 출력할 마스크를 설정해줍니다.
+//    var mask       ="<div id='mask' style='position:absolute; z-index:9000; background-color:#000000; display:none; left:0; top:0;'></div>";
+//    var loadingImg ='';
+//
+//    loadingImg +="<div id='loadingImg'>";
+//    loadingImg +="<img src = \"/static/Spinner.gif\" 'style='position: absolute; display: block;margin:0 auto;'/>";
+//    loadingImg +="</div>";
+//
+//    //화면에 레이어 추가
+//    $('body')
+//        .append(mask)
+//        .append(loadingImg)
+//
+//    //마스크의 높이와 너비를 화면 것으로 만들어 전체 화면을 채웁니다.
+//    $('#mask').css({
+//            'width' : maskWidth
+//            ,'height': maskHeight
+//            ,'opacity' :'0.3'
+//    });
+//
+//    //마스크 표시
+//    $('#mask').show();
+//
+//    //로딩중 이미지 표시
+//    $('#loadingImg').show();
+//}
+//function closeLoadingWithMask() {
+//    $('#mask, #loadingImg').hide();
+//    $('#mask, #loadingImg').remove();
+//}
+
+
 

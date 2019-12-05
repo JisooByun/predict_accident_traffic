@@ -184,7 +184,7 @@
         </thead>
         <tbody>
           <tr>
-            <td scope="row" data-toggle="modal" data-target="#traffic-chart"><center><img src = "{{ url_for('static',filename='ico_barchart.png') }}"></center></td>
+            <td><center class="info0"></center></td>
             <td><center class ="info1">교차로</center></td>
             <td><center class ="info2">위치</center></td>
             <td><center class ="info3">신호등</center></td>
@@ -235,20 +235,20 @@
 
   <!-- <script src="bootstrap.js"></script> -->
   <!-- <script src ="traffic.js"></script> -->
-  <script>function create_list2(){
-    axios.post('http://localhost:5000/graph', {
-    GuName: GuName_select,
-    factor: factor_select
-    })
-    .then(response=> {
-    graph_datas = JSON.parse(response.data)
-    graph5 = graph_datas.data
-    console.log(graph5)
-    })
-    .catch(error=> {
-        console.log(error);
-      });
-}
+<!--  <script>function create_list2(){-->
+<!--    axios.post('http://localhost:5000/graph', {-->
+<!--    GuName: GuName_select,-->
+<!--    factor: factor_select-->
+<!--    })-->
+<!--    .then(response=> {-->
+<!--    graph_datas = JSON.parse(response.data)-->
+<!--    graph5 = graph_datas.data-->
+<!--    console.log(graph5)-->
+<!--    })-->
+<!--    .catch(error=> {-->
+<!--        console.log(error);-->
+<!--      });-->
+<!--}-->
 
 </script>
 </body>
