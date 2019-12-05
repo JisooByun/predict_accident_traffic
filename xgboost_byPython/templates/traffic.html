@@ -24,7 +24,7 @@
         <nav class="navbar navbar-light bg-light">
           <a class="navbar-brand" href="traffic.html">
             <img src="{{ url_for('static',filename='pr_title.png') }}" class="d-inline-block align-top" alt="" style="width: 174px; height: 40px;">
-            <font size="15rem"><b>　　　　　Traffic Accident Predict Program</b></font>
+            <font size="15rem"><b>　　　　　Traffic Accident Predict Program</b>　<img src="{{ url_for('static',filename='TeamName_sm.png') }}"></font>
           </a>
         </nav>
       </header>
@@ -184,7 +184,7 @@
         </thead>
         <tbody>
           <tr>
-            <td><center class="info0"></center></td>
+            <td><center class ="info0">#</center></td>
             <td><center class ="info1">교차로</center></td>
             <td><center class ="info2">위치</center></td>
             <td><center class ="info3">신호등</center></td>
@@ -207,26 +207,6 @@
       <footer>
         seocho-KAIST @2019
       </footer>
-    </div>
-<!--모달 레이아웃-->
-    <div class="modal fade" id="traffic-chart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            차트 들어갈 곳
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
     </div>
 
   <!-- script part -->
