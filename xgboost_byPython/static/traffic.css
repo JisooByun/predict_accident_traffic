@@ -111,6 +111,11 @@ footer {
   margin-right: 4rem;
 }
 
+.text_num {
+  margin-left: 1.1rem;
+}
+
+
 .t_btn {
   justify-content: space-around;
   vertical-align: center;
@@ -136,10 +141,10 @@ footer {
   vertical-align: bottom;
 }
 
-
 .doit {
   height: 3.5rem;
-  width: 3.5rem;
+  width: 4rem;
+  margin-left: 1rem;
   vertical-align: bottom;
 }
 

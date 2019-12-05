@@ -22,7 +22,7 @@
       <header>
         <!-- Image and text -->
         <nav class="navbar navbar-light bg-light">
-          <a class="navbar-brand" href="{{ url_for('templates',filename='traffic.html') }}">
+          <a class="navbar-brand">
             <img src="{{ url_for('static',filename='pr_title.png') }}" class="d-inline-block d-inline-block" alt="" style="width: 174px; height: 40px;">
             <font size="15rem"><b>　　　　　Traffic Accident Predict Program</b>　<img src="{{ url_for('static',filename='TeamName_sm.png') }}"></font>
           </a>
@@ -81,10 +81,10 @@
                       <option value="school_num">학교수</a>
                       <option value="mean_roadwth">도로폭</a>
                     </select>
-                    <input type="text" class ="text_num" style="text-align:center; width:3.5rem; height: 2.8rem;">
-                    <button class="plus" onclick="plus()">+</button>
-                    <button class="minus" onclick="minus()">-</button>
-                    <button class="doit" onclick="isloading.start();create_list()" >실행</button>
+                    <input type="text" class ="text_num" style="text-align:center; width:3.5rem; height: 3.5rem;">
+                    <button class="plus" onclick="plus()"><b>+</b></button>
+                    <button class="minus" onclick="minus()"><b>-</b></button>
+                    <button class="doit" onclick="isloading.start();create_list()" > 실 행 </button>
                   </div>
                 </div>
                 <hr width="100%">
