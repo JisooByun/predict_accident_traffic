@@ -22,8 +22,8 @@
       <header>
         <!-- Image and text -->
         <nav class="navbar navbar-light bg-light">
-          <a class="navbar-brand" href="traffic.html">
-            <img src="{{ url_for('static',filename='pr_title.png') }}" class="d-inline-block align-top" alt="" style="width: 174px; height: 40px;">
+          <a class="navbar-brand" href="{{ url_for('templates',filename='traffic.html') }}">
+            <img src="{{ url_for('static',filename='pr_title.png') }}" class="d-inline-block d-inline-block" alt="" style="width: 174px; height: 40px;">
             <font size="15rem"><b>　　　　　Traffic Accident Predict Program</b>　<img src="{{ url_for('static',filename='TeamName_sm.png') }}"></font>
           </a>
         </nav>
@@ -38,8 +38,8 @@
               <td style="width: 45%">
 
               <div class = "col"> <!-- 왼쪽 칸-->
-                <div class = "row md_left justify-content-md-center"> <!--md_left는 내가 만든 css 변수 -->
-                  <div class = "col-md-4" name = "first_select"> <!-- 첫번째 구 선택 버튼-->
+                <div class = "row md_left justify-content-center"> <!--md_left는 내가 만든 css 변수 -->
+                  <div class = "col-md-3 offset-md-1 frist_select" name = "first_select"> <!-- 첫번째 구 선택 버튼-->
                     <select name = "GuName" id = "GuName" onchange="myfunc1(this.options[this.selectedIndex].value)">
                       <option value=""> --서울 시 구 선택-- </option>
                       <option value="AA"> 강남구 </option>
@@ -70,7 +70,7 @@
                     </select>
                   </div>
 
-                  <div class = "col-md-8" name = "second_select"> <!-- 두번째 요인 선택 -->
+                  <div class = "col-md-7" name = "second_select"> <!-- 두번째 요인 선택 -->
                     <select name = "factor" id = "factor" onchange="myfunc2(this.options[this.selectedIndex].value)">
                       <option value="" selected="selected">--요인 변경사항--</option>
                       <option value="trafficlight_num">신호등</a>
@@ -81,9 +81,9 @@
                       <option value="school_num">학교수</a>
                       <option value="mean_roadwth">도로폭</a>
                     </select>
-                    <input type="text" class ="text_num" style="text-align:center; width:3.5rem; height: 2.8rem;">
-                    <button class="plus" onclick="plus()">+</button>
-                    <button class="minus" onclick="minus()">-</button>
+                    <input type="text" class ="text_num" style="text-align:center; width:3.5rem; height: 3.5rem;">
+                    <button class="plus" onclick="plus()"><b>+</b></button>
+                    <button class="minus" onclick="minus()"><b>-</b></button>
                     <button class="doit" onclick="create_list()" >실행</button>
                   </div>
                 </div>

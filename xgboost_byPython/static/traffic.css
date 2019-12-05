@@ -4,7 +4,8 @@
 
 select {
 width: 11rem;
-padding: .6rem .4rem;
+height: 3.5rem;
+padding: .4rem;
 border: 1px solid #999;
 font-family: inherit;
 background: url(arrow.jpg) no-repeat 95% 50%;
@@ -112,7 +113,7 @@ footer {
 
 .t_btn {
   justify-content: space-around;
-  vertical-align: middle;
+  vertical-align: center;
   height: 5rem;
 }
 .list-group-horizontal {
@@ -130,12 +131,14 @@ footer {
 
 .plus, .minus {
   font-size: large;
-  width: 1.9rem;
-  height: 2.8rem;
+  width: 2.5rem;
+  height: 3.5rem;
   vertical-align: bottom;
 }
 
+
 .doit {
-  height: 2.8rem;
+  height: 3.5rem;
+  width: 3.5rem;
   vertical-align: bottom;
 }
