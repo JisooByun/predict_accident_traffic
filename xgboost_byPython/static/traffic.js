@@ -135,12 +135,13 @@ function minus(){
 }  
 
 function create_list(){
-  if(typeof factor_select === "undefined"){
-  isloading.stop();
-  alert("요인을 선택해주세요");
-  }else if(typeof GuName_select === "undefined"){
+  if(typeof GuName_select === "undefined"){
   isloading.stop();
   alert("구를 선택해주세요");
+  }
+  else if(typeof factor_select === "undefined"){
+  isloading.stop();
+  alert("요인을 선택해주세요");
   }
   else{
   axios.post('http://localhost:5000/test', {
