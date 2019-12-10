@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 import joblib
 
-data = pd.read_csv('./df_busan_group.csv',names = ["index","Gucode","X","Y","light_num","cross_num","subway_num","school_num","land_value","center_div","island","limit_vel","road_num","road_size","load_length","acc_num"])
+data = pd.read_csv('./df_busan_group.csvfile',names = ["index","Gucode","X","Y","light_num","cross_num","subway_num","school_num","land_value","center_div","island","limit_vel","road_num","road_size","load_length","acc_num"])
 del data["index"]
 del data["Gucode"]
 data = data.drop(0,0)

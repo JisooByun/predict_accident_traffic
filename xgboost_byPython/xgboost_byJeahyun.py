@@ -36,7 +36,7 @@ plt.rcParams['axes.grid'] = True
 
 #특정 경로에서 불러오고, 컬럼명 확인하기
 
-df = pd.read_csv("Seoul_Busan_Data.csv", encoding = 'UTF-8')
+df = pd.read_csv("Seoul_Busan_Data.csvfile", encoding = 'UTF-8')
 print(df.columns)
 
 #필요없는 컬럼 삭제 및 중복Data 결합_사고건수 기준 학습용(axis=o이면 row, axis=1이면 column / inplace=True는 drop후의 df로 기존 df를 대체한다는 의미, 즉 기본값)
@@ -68,7 +68,7 @@ from warnings import simplefilter
 simplefilter(action='ignore', category=FutureWarning)
 
 '''전처리 마지막(저장코드)
-data.to_csv("./Busan_FinalData.csv")'''
+data.to_csv("./Busan_FinalData.csvfile")'''
 
 #루트를 취한 사고값 컬럼 추가
 
