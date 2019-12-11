@@ -99,16 +99,16 @@ function myfunc2(val){
 }
 
 function plus(){
-  if(factor_select == "trafficlight_num"||factor_select == "crosswalk_num"||factor_select == "mean_lane"){
+  if(factor_select == "trafficlight_num"||factor_select == "crosswalk_num"||factor_select == "mean_lanes"){
     if(number_factor < 2){
       number_factor = number_factor +1 ;
       console.log(number_factor)
     }
   }
-  else if(factor_select == "mean_roadwth"){
+  else if(factor_select == "mean_wth"){
     if(number_factor<10){
     number_factor = number_factor +5}
-  }else if(factor_select=="mediansep_num"||factor_select=="island_num"||factor_select=="school_num"){
+  }else if(factor_select=="mediansep_"||factor_select=="island_num"||factor_select=="school_num"){
     if(number_factor<1){
       number_factor = number_factor +1
     }
@@ -117,16 +117,16 @@ function plus(){
 }
 
 function minus(){
-  if(factor_select == "trafficlight_num"||factor_select == "crosswalk_num"||factor_select == "mean_lane"){
+  if(factor_select == "trafficlight_num"||factor_select == "crosswalk_num"||factor_select == "mean_lanes"){
     if(number_factor > -2){
       number_factor = number_factor -1 ;
       console.log(number_factor)
     }
   }
-  else if(factor_select == "mean_roadwth"){
+  else if(factor_select == "mean_wth"){
     if(number_factor>-10){
     number_factor = number_factor -5}
-  }else if(factor_select=="mediansep_num"||factor_select=="island_num"||factor_select=="school_num"){
+  }else if(factor_select=="mediansep_"||factor_select=="island_num"||factor_select=="school_num"){
     if(number_factor>-1){
       number_factor = number_factor -1
     }
@@ -137,11 +137,15 @@ function minus(){
 function create_list(){
   if(typeof GuName_select === "undefined"){
   isloading.stop();
-  alert("구를 선택해주세요");
+  alert("구를 선택해주세요.");
   }
   else if(typeof factor_select === "undefined"){
   isloading.stop();
-  alert("요인을 선택해주세요");
+  alert("요인을 선택해주세요.");
+  }
+  else if(number_factor == 0){
+  isloading.stop();
+  alert("값을 선택해주세요.")
   }
   else{
   axios.post('http://localhost:5000/test', {
@@ -156,9 +160,9 @@ function create_list(){
     isloading.stop()
     for(i = 0; i<6; i++){
     $('.num'+(i+1)).html("위도:"+top5[i]["Latitude"].toFixed(3)+" 경도:"+top5[i]["Longitude"].toFixed(3));
-    $('.acc_num'+(i+1)).html(top5[i]["acc_count"].toFixed(0)+"건")
+    $('.acc_num'+(i+1)).html(top5[i]["total_acc"].toFixed(0)+"건")
     $('.case'+(i+1)).html(top5[i]["pred-decline"].toFixed(2)+"건")
-    $('.prob'+(i+1)).html((top5[i]["pred-decline"]/top5[i]["acc_count"]*100).toFixed(2)+"%")
+    $('.prob'+(i+1)).html((top5[i]["pred-decline"]/top5[i]["total_acc"]*100).toFixed(2)+"%")
     }
     myfunc1(top5[0]["gu_code"])
     var map = new naver.maps.Map('map', mapOptions); 
@@ -166,9 +170,9 @@ function create_list(){
       var circle = new naver.maps.Circle({
       map: map,
       center: new naver.maps.LatLng(top5[index]["Latitude"], top5[index]["Longitude"]),
-      radius: 100+300*(top5[index]["acc_count"]/250),
+      radius: 100+300*(top5[index]["total_acc"]/300),
       fillColor: 'crimson',
-      fillOpacity: 0.2+1.5*(top5[index]["acc_count"]/250)
+      fillOpacity: 0.2+1.5*(top5[index]["total_acc"]/300)
      })
   };
 })
@@ -185,12 +189,12 @@ function view_map(index){
   $(".info2").html(top5[index]["Longitude"].toFixed(3))
   $(".info3").html(top5[index]["trafficlight_num"])
   $(".info4").html(top5[index]["crosswalk_num"])
-  $(".info5").html(top5[index]["mean_lane"].toFixed(1))
-  $(".info6").html(top5[index]["mean_maxspeed"])
+  $(".info5").html(top5[index]["mean_lanes"].toFixed(1))
+  $(".info6").html(top5[index]["mean_speed"])
   $(".info7").html(top5[index]["island_num"])
-  $(".info8").html(top5[index]["mediansep_num"])
+  $(".info8").html(top5[index]["mediansep_"])
   $(".info9").html(top5[index]["school_num"])
-  $(".info10").html(top5[index][""])
+  $(".info10").html(top5[index]["police_num"])
   $(".info11").html(top5[index]["station_num"])
 
   var mapOptions = {
@@ -207,20 +211,20 @@ function view_map(index){
     fillOpacity: 0.6
 });
 }
-function create_list2(){
-    axios.post('http://localhost:5000/graph', {
-    GuName: GuName_select,
-    factor: factor_select
-    })
-    .then(response=> {
-    graph_datas = JSON.parse(response.data)
-    graph5 = graph_datas.data
-    console.log(graph5)
-    })
-    .catch(error=> {
-        console.log(error);
-      });
-}
+// function create_list2(){
+//     axios.post('http://localhost:5000/graph', {
+//     GuName: GuName_select,
+//     factor: factor_select
+//     })
+//     .then(response=> {
+//     graph_datas = JSON.parse(response.data)
+//     graph5 = graph_datas.data
+//     console.log(graph5)
+//     })
+//     .catch(error=> {
+//         console.log(error);
+//       });
+// }
 
 isloading = {
   start: function() {

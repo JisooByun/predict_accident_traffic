@@ -15,7 +15,7 @@ def return_top5_cross(GuName,factor,value):
     cursor.execute(get_Gu,(GuName))
 
     datas = cursor.fetchall()
-    df = pd.DataFrame(datas, columns =  ["id", "gu_code", "Longitude", "Latitude", "trafficlight_num", "crosswalk_num", "station_num", "school_num", "avg_landprice", "house_1", "house_2", "house_3", "house_4", "commerce_1", "commerce_2", "commerce_3", "commerce_4", "green_1", "green_2", "green_3", "industry_1","industry_2", "industry_3", "limit_num", "mediansep_num", "island_num", "mean_lane", "mean_maxspeed", "mean_roadwth", "mean_roadlen", "busstop_num", "acc_count"])
+    df = pd.DataFrame(datas, columns =  ["id", "gu_code", "Longitude", "Latitude", "Radius", "trafficlight_num", "crosswalk_num", "station_num", "school_num", "land_price", "house_1", "house_2", "house_3", "house_4", "commerce_1", "commerce_2", "commerce_3", "commerce_4", "green_1", "green_2", "green_3", "industry_1","industry_2", "industry_3", "limit_num", "mediansep_", "island_num", "mean_lanes", "mean_speed", "mean_wth", "mean_loadlen", "busstop_num","police_num","CtoC_num","CtoP_num", "total_acc"])
     print("------------------pick selected gu from sql ------------------")
     print(df)
     df_process = df.iloc[:,4:-1]
@@ -23,7 +23,7 @@ def return_top5_cross(GuName,factor,value):
     print(df_process)
     df_process[df_process.columns] = df_process[df_process.columns].apply(pd.to_numeric, downcast='float', errors='coerce')
 
-    xgboost_001 = joblib.load('xg_reg_002')
+    xgboost_001 = joblib.load('catboost1.pkl')
 
     pred_ori = xgboost_001.predict(df_process)
     df["pred_ori"] = pred_ori
@@ -58,7 +58,7 @@ def return_top5_cross(GuName,factor,value):
     print(x)
 
     json_x = x.to_json(orient='table')
-    print(json_x)
+    
 
     return json_x
-# return_top5_cross("AA","trafficlight_num",1) #test data
+return_top5_cross("AA","trafficlight_num",1) #test data

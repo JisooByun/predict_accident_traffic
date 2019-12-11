@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa752794-8001-4899-b53b-fb55b6ebca6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/xgboost.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/xgboost.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/131415.json" beforeDir="false" afterPath="$PROJECT_DIR$/xlcreate/131415.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exle.py" beforeDir="false" afterPath="$PROJECT_DIR$/exle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_from_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_from_sql.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pymysql_ex.py" beforeDir="false" afterPath="$PROJECT_DIR$/pymysql_ex.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/traffic.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/traffic.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/traffic_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/traffic_app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xgboost_byJeahyun.py" beforeDir="false" afterPath="$PROJECT_DIR$/xgboost_byJeahyun.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xgboost_traffic.py" beforeDir="false" afterPath="$PROJECT_DIR$/xgboost_traffic.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,13 +37,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/xlcreate" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/xlcreate" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/xlcreate" />
       <recent name="$PROJECT_DIR$/xlcreate/csvfile" />
@@ -56,8 +48,12 @@
       <recent name="C:\Users\Byun\Desktop\Web\traffic\xgboost_byPython" />
       <recent name="C:\Users\Byun\Desktop\Web\traffic\xgboost_byPython\templates" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/xlcreate" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.xlcreate">
+  <component name="RunManager" selected="Python.traffic_app">
     <configuration name="css_app" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="xgboost" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -79,6 +75,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="data_from_sql" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="xgboost" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_from_sql.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="graph2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="xgboost" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -92,27 +109,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graph2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="graph_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="xgboost" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graph_data.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -165,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.xlcreate" />
         <item itemvalue="Python.traffic_app" />
+        <item itemvalue="Python.data_from_sql" />
+        <item itemvalue="Python.xlcreate" />
         <item itemvalue="Python.css_app" />
         <item itemvalue="Python.graph2" />
-        <item itemvalue="Python.graph_data" />
       </list>
     </recent_temporary>
   </component>
@@ -216,22 +212,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="860" y="381" width="424" height="489" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1575979991891" />
-    <state width="932" height="329" key="GridCell.Tab.0.bottom" timestamp="1575982771413">
+    <state width="1893" height="282" key="GridCell.Tab.0.bottom" timestamp="1576051696409">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="932" height="329" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1575982771413" />
-    <state width="932" height="329" key="GridCell.Tab.0.center" timestamp="1575982771412">
+    <state width="1893" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1576051696409" />
+    <state width="1893" height="282" key="GridCell.Tab.0.center" timestamp="1576051696409">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="932" height="329" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1575982771412" />
-    <state width="932" height="329" key="GridCell.Tab.0.left" timestamp="1575982771412">
+    <state width="1893" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1576051696409" />
+    <state width="1893" height="282" key="GridCell.Tab.0.left" timestamp="1576051696408">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="932" height="329" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1575982771412" />
-    <state width="932" height="329" key="GridCell.Tab.0.right" timestamp="1575982771413">
+    <state width="1893" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1576051696408" />
+    <state width="1893" height="282" key="GridCell.Tab.0.right" timestamp="1576051696409">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="932" height="329" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1575982771413" />
+    <state width="1893" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1576051696409" />
     <state width="932" height="329" key="GridCell.Tab.1.bottom" timestamp="1575982771414">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
